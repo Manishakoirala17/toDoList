@@ -14,14 +14,20 @@ a {
 * {
   box-sizing: border-box;
 }
+.todo-container{
+  width: 951px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 18px;
+  overflow: auto;
+}
 .input-container{
-  width: 600px;
-  margin: auto;
+  height: 100px;
+  overflow: auto;
+  /* margin: auto; */
   border: 1px solid #d6d2d2;
-  padding: 15px;
-  border-radius: 50px;
   display: flex;
-  
 }
 .input-container input{
   flex: 1;
@@ -29,29 +35,88 @@ a {
   outline: none;
   font-size: 16pt;
   padding: 6px;
+  margin-left: 58px;
+
 }
 .add-btn{
+  /*  */
+  
   border: none;
-  background-color: white;
-  font-size: 16pt;
-  color: green;
+  font-size: 20px;
+  color: #FAFAFA;
   cursor: pointer;
+  margin-right: 58px;
+  width: 100px;
+  background: #58B9FF;
+  border-radius: 5px;
+  height: 40px;
+  position: relative;
+  top: 25px;
 }
 .list-container{
-  width: 100%;
-  margin: auto; 
+  
+}
+input.selectbox{
+  width: 20px;
+  height: 20px; 
+  outline: 1px solid #F59300 ;
+  border: 1px solid #F59300;
+  margin-left: 10px;
+
+}
+input.completedBox{
+  width: 20px;
+  height: 20px; 
+  outline:  2px solid #01B109;
+  border:  2px solid #01B109;
+}
+input[type=checkbox]:checked {
+  accent-color: white;
+}
+
+
+.list-label{
+  margin-left: 18px;
+  font-size: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+  width: 60%;
+  word-wrap: break-word;
+}
+.completed-text{
+  margin-left: 18px;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-decoration: line-through;
+  cursor: pointer;
+  width: 60%;
+  word-wrap: break-word;
+  color: rgb(121, 119, 119);
 }
 .list-box{
+  overflow: auto;
   display: flex;
-  padding: 4px;
+  height: 70px;
   border: 1px solid #d6d2d2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding-left: 14px;
+  cursor: pointer;
+  align-items: center;
+
+}
+.todo-list-box{
+  margin-top: 10px;
+  overflow: auto;
 }
 .list-text{
-  flex: 1;
+  /* flex: 1; */
+  margin-left:10px ;
 }
 .list-input{
   font-size: 16pt;
- width: 90%;
+ /* width: 90%; */
 padding: 10px;
 border: none;
 
@@ -72,22 +137,15 @@ border: none;
 .list-remove-btn{
   color: red;
   cursor: pointer;
-  font-size: 16pt;
-  margin-right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left:auto;
+  margin-right:0;
 }
-.todo-container{
-  width: 800px;
-  margin: auto;
-  border: 1px solid black;
-  padding: 40px;
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 18px;
+.list-remove-btn button{
+  font-size: 18pt;
+  cursor:pointer
 }
+
 .todo-inbox{
-  border: 1px solid #d6d2d2;
+  border: none;
 padding: 20px;
 }
